@@ -1,0 +1,18 @@
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\DPA_Musicsheets Thijn van Dijk.exe.config
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\MainWindow.baml
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\MainWindow.g.cs
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\App.g.cs
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk_MarkupCompile.cache
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk.g.resources
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets_Thijn_van_Dijk.Properties.Resources.resources
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk.csproj.GenerateResource.Cache
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\DPA_Musicsheets Thijn van Dijk.exe
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\DPA_Musicsheets Thijn van Dijk.pdb
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\PSAMControlLibrary.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\PSAMWPFControlLibrary.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\Sanford.Multimedia.Midi.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\Sanford.Multimedia.Midi.pdb
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\bin\Debug\Sanford.Multimedia.Midi.xml
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk.exe
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk.pdb
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\DPA_Musicsheets Thijn van Dijk\obj\Debug\DPA_Musicsheets Thijn van Dijk.csprojResolveAssemblyReference.cache

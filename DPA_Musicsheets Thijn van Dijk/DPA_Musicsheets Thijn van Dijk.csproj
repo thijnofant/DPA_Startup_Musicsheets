@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78BC0C32-8B72-44D2-BA4D-20E3A0A046D4}</ProjectGuid>
+    <ProjectGuid>{7E6BDE8C-2FEB-4ADA-AF5B-DB87C0082367}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DPA_Musicsheets</RootNamespace>
-    <AssemblyName>DPA_Musicsheets</AssemblyName>
+    <RootNamespace>DPA_Musicsheets_Thijn_van_Dijk</RootNamespace>
+    <AssemblyName>DPA_Musicsheets Thijn van Dijk</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,21 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PSAMControlLibrary, Version=2.1.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="PSAMControlLibrary">
       <HintPath>..\packages\PSAMControlLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="PSAMWPFControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="PSAMWPFControlLibrary">
       <HintPath>..\packages\PSAMWPFControlLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Sanford.Multimedia.Midi, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sanford.Multimedia.Midi">
       <HintPath>..\packages\Sanford.Multimedia.Midi.6.1.2\lib\net20\Sanford.Multimedia.Midi.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,23 +65,80 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MidiTrack.cs" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Command\AddCleffCommand.cs" />
+    <Compile Include="Chain\AddCleffHandler.cs" />
+    <Compile Include="Chain\AddFourFourthTimeHandler.cs" />
+    <Compile Include="Chain\AddSixEightTimeHandler.cs" />
+    <Compile Include="Command\AddTempoCommand.cs" />
+    <Compile Include="Chain\AddTempoHandler.cs" />
+    <Compile Include="Chain\AddThreeFourthTimeHandler.cs" />
+    <Compile Include="Command\RenderSheetCommand.cs" />
+    <Compile Include="Command\SaveFileCommand.cs" />
+    <Compile Include="Domain\Clef.cs" />
+    <Compile Include="Domain\NoteTone.cs" />
+    <Compile Include="IO\LilypondConverter.cs" />
+    <Compile Include="IO\MidiConverter.cs" />
+    <Compile Include="IO\MidiReader.cs" />
+    <Compile Include="IO\MidiTrack.cs" />
+    <Compile Include="Visitors\AudioPlayerVisitor.cs" />
+    <Compile Include="Chain\ChainHandler.cs" />
+    <Compile Include="Domain\Chord.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\CommandRegister.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="State\ExitState.cs" />
+    <Compile Include="Command\FourFourthTimeCommand.cs" />
+    <Compile Include="Chain\KeyboardChain.cs" />
+    <Compile Include="Conf\KeyboardConfig.cs" />
+    <Compile Include="IO\LoadSaveFileStrategy.cs" />
+    <Compile Include="IO\LoadSaveLilypond.cs" />
+    <Compile Include="IO\LoadSaveMidi.cs" />
+    <Compile Include="Memento\Memento.cs" />
+    <Compile Include="Memento\MementoCaretaker.cs" />
+    <Compile Include="Domain\MusicComponent.cs" />
+    <Compile Include="MusicComponentFactory.cs" />
+    <Compile Include="Domain\MusicComposite.cs" />
+    <Compile Include="Domain\MusicLeaf.cs" />
+    <Compile Include="Domain\MusicDuration.cs" />
+    <Compile Include="Domain\MusicObject.cs" />
+    <Compile Include="Domain\MusicSheet.cs" />
+    <Compile Include="MusicSheetBuilder.cs" />
+    <Compile Include="Domain\Note.cs" />
+    <Compile Include="Domain\NoteMod.cs" />
+    <Compile Include="Command\OpenFileCommand.cs" />
+    <Compile Include="Chain\OpenFileHandler.cs" />
+    <Compile Include="State\PlayingMusic.cs" />
+    <Compile Include="Command\PlayMusicCommand.cs" />
+    <Compile Include="Chain\PlayMusicHandler.cs" />
+    <Compile Include="Domain\Repeating.cs" />
+    <Compile Include="Domain\Rest.cs" />
+    <Compile Include="State\Saved.cs" />
+    <Compile Include="Chain\SaveLilypondHandler.cs" />
+    <Compile Include="Command\SaveLilypondCommand.cs" />
+    <Compile Include="Command\SaveMidiCommand.cs" />
+    <Compile Include="Chain\SaveMidiHandler.cs" />
+    <Compile Include="IO\SavePDF.cs" />
+    <Compile Include="Command\SavePDFCommand.cs" />
+    <Compile Include="Chain\SavePDFHandler.cs" />
+    <Compile Include="Visitors\MusicsheetToLilypondVisitor.cs" />
+    <Compile Include="Visitors\SheetPrintVisitor.cs" />
+    <Compile Include="Command\SixEightTimeCommand.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="Domain\Tempo.cs" />
+    <Compile Include="Command\ThreeFourthTimeCommand.cs" />
+    <Compile Include="Domain\TimeSignature.cs" />
+    <Compile Include="State\Typing.cs" />
+    <Compile Include="State\Unsaved.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Visitors\MusicComponentVisitor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MidiPlayer.cs" />
-    <Compile Include="MidiReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,7 +156,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,10 +166,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ThijnMusicApp\ThijnMusicApp.csproj">
-      <Project>{2a3b0c8d-30e7-4af8-ac30-d41e0bdb4d2b}</Project>
-      <Name>ThijnMusicApp</Name>
-    </ProjectReference>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -45,11 +45,33 @@ namespace DPA_Musicsheets
 
         private void FillPSAMViewer()
         {
+            SheetPrinterFacade printer = new SheetPrinterFacade(staff);
+
+            MusicSheet sheet = new MusicSheet("test");
+            MusicTrack track1 = new MusicTrack("track1", new Cleff("G"));
+            sheet.Tracks.Add(track1);
+            TrackPiece piece1 = new TrackPiece(100, new Timesignature(2,4));
+            track1.TrackPieces.Add(piece1);
+            piece1.AddMusicalObject(new Rest(Duration.Eight));
+            piece1.AddMusicalObject(new MusicNote("A", NoteMod.None, 4, Duration.Whole));
+            piece1.AddMusicalObject(new Rest(Duration.Eight));
+            piece1.AddMusicalObject(new MusicNote("A", NoteMod.None, 4, Duration.Half));
+            piece1.AddMusicalObject(new MusicNote("A", NoteMod.None, 4, Duration.Sixteenth));
+            piece1.AddMusicalObject(new MusicNote("C", NoteMod.None, 5, Duration.Eight));
+            piece1.AddMusicalObject(new MusicNote("C", NoteMod.None, 5, Duration.Sixteenth));
+            piece1.AddMusicalObject(new Rest(Duration.Eight));
+            piece1.AddMusicalObject(new MusicNote("C", NoteMod.None, 5, Duration.Sixteenth));
+            piece1.AddMusicalObject(new MusicNote("C", NoteMod.None, 5, Duration.Sixteenth));
+            piece1.AddMusicalObject(new MusicNote("A", NoteMod.None, 5, Duration.Sixteenth));
+
+            printer.PrintMusicSheet(sheet);
+            /*
             staff.ClearMusicalIncipit();
+            
 
             // Clef = sleutel
             staff.AddMusicalSymbol(new Clef(ClefType.GClef, 2));
-            staff.AddMusicalSymbol(new TimeSignature(TimeSignatureType.Numbers, 4, 4));
+            staff.AddMusicalSymbol(new PSAMControlLibrary.TimeSignature(TimeSignatureType.Numbers, 4, 4));
             /* 
                 The first argument of Note constructor is a string representing one of the following names of steps: A, B, C, D, E, F, G. 
                 The second argument is number of sharps (positive number) or flats (negative number) where 0 means no alteration. 
@@ -66,6 +88,7 @@ namespace DPA_Musicsheets
                         viewer.AddMusicalSymbol(e); 
             */
 
+            /*
             staff.AddMusicalSymbol(new Note("A", 0, 4, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Start, NoteBeamType.Start }));
             staff.AddMusicalSymbol(new Note("C", 1, 5, MusicalSymbolDuration.Sixteenth, NoteStemDirection.Down, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Continue, NoteBeamType.End }));
             staff.AddMusicalSymbol(new Note("D", 0, 5, MusicalSymbolDuration.Eighth, NoteStemDirection.Down, NoteTieType.Start, new List<NoteBeamType>() { NoteBeamType.End }));
@@ -83,6 +106,7 @@ namespace DPA_Musicsheets
                 new Note("G", 0, 4, MusicalSymbolDuration.Half, NoteStemDirection.Up, NoteTieType.None, new List<NoteBeamType>() { NoteBeamType.Single })
                 { IsChordElement = true });
             staff.AddMusicalSymbol(new Barline());
+            */
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)

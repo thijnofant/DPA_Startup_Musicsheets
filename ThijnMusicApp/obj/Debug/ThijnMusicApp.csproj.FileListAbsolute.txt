@@ -1,0 +1,7 @@
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\bin\Debug\ThijnMusicApp.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\bin\Debug\ThijnMusicApp.pdb
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\bin\Debug\PSAMControlLibrary.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\bin\Debug\PSAMWPFControlLibrary.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\obj\Debug\ThijnMusicApp.csprojResolveAssemblyReference.cache
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\obj\Debug\ThijnMusicApp.dll
+D:\Users\Thijn\Documents\smartgit\DPA_Startup_Musicsheets\ThijnMusicApp\obj\Debug\ThijnMusicApp.pdb

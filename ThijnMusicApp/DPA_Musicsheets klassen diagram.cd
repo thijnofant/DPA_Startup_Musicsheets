@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="kijken naar Composite patternt bij muziekobjecten voor akkoorden&#xD;&#xA;">
+    <Position X="9.495" Y="10.422" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="DPA_Musicsheets.TrackPiece">
+    <Position X="0.75" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAECAgAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>TrackPiece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPA_Musicsheets.MusicTrack">
+    <Position X="0.75" Y="0.5" Width="3.5" />
+    <AssociationLine Name="TrackPieces" Type="DPA_Musicsheets.TrackPiece">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.118" Y="0.084" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAQA=</HashCode>
+      <FileName>Track.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TrackPieces" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DPA_Musicsheets.MusicSheet">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Musicsheet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tracks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DPA_Musicsheets.Midi">
+    <Position X="13.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Midi.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DPA_Musicsheets.Lilypond">
+    <Position X="13.25" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lilypond.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DPA_Musicsheets.Timesignature">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Timesignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPA_Musicsheets.Rest">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPA_Musicsheets.Cleff">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Cleff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DPA_Musicsheets.Chord">
+    <Position X="6.75" Y="8.5" Width="1.5" />
+    <InheritanceLine Type="DPA_Musicsheets.MusicalObject" FixedToPoint="true">
+      <Path>
+        <Point X="1.875" Y="8.103" />
+        <Point X="1.875" Y="8.308" />
+        <Point X="7.688" Y="8.308" />
+        <Point X="7.688" Y="8.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chord.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Notes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DPA_Musicsheets.MusicalObject">
+    <Position X="0.5" Y="7" Width="2.75" />
+    <AssociationLine Name="ElongateBy" Type="DPA_Musicsheets.MusicalObject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.5" Y="7.562" />
+        <Point X="0.26" Y="7.562" />
+        <Point X="0.26" Y="6.76" />
+        <Point X="1.312" Y="6.76" />
+        <Point X="1.312" Y="7" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.121" Y="0.18" Height="0.182" Width="0.884" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>MusicalObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Duur" />
+      <Property Name="ElongateBy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DPA_Musicsheets.MusicNote">
+    <Position X="2.5" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>MusicNote.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NoteMod" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DPA_Musicsheets.SheetPrinterFacade">
+    <Position X="10" Y="7.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAEACAAAAAACBAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>SheetPrinterFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DPA_Musicsheets.MusicIO">
+    <Position X="10" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MusicIO.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DPA_Musicsheets.NoteMod">
+    <Position X="2.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAEAAAA=</HashCode>
+      <FileName>NoteMod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DPA_Musicsheets.Duration">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAIAAAAAAAAAAJAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Duration.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
